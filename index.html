@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho Uninter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        margin: 0 10px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+      section {
+        padding: 20px;
+        margin: 10px 0;
+        display: none; /* Esconde todas as seções por padrão */
+      }
+      section.active {
+        display: block; /* Mostra a seção ativa */
+      }
+      h2 {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#sobreMim" onclick="showSection('sobreMim')">Sobre mim</a>
+        </li>
+        <li>
+          <a href="#formacao" onclick="showSection('formacao')"
+            >Formação Educacional</a
+          >
+        </li>
+        <li>
+          <a href="#portfolio" onclick="showSection('portfolio')">Portfólio</a>
+        </li>
+        <li><a href="#contato" onclick="showSection('contato')">Contato</a></li>
+      </ul>
+    </nav>
+
+    <section id="sobreMim">
+      <h2>Sobre mim</h2>
+      <p>
+        Meu nome é Claudenir de Souza Nojosa Filho, tenho 25 anos e sou
+        apaixonado por tecnologia. Ao longo dos anos, desenvolvi um forte
+        interesse por inovações tecnológicas e a maneira como elas podem
+        transformar a vida das pessoas e empresas.
+      </p>
+    </section>
+
+    <section id="formacao">
+      <h2>Formação Educacional</h2>
+      <p>
+        Sou formado em Ciências Contábeis pela Universidade de Fortaleza
+        (Unifor) e atualmente estou cursando Análise e Desenvolvimento de
+        Sistemas na Uninter. Minha formação combina conhecimentos financeiros
+        sólidos com uma crescente expertise em desenvolvimento de software.
+      </p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfólio</h2>
+      <a href="https://co-story.vercel.app/"> https://co-story.vercel.app/</a>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>
+        Você pode entrar em contato comigo através do LinkedIn ou pelo meu
+        e-mail. Fique à vontade para me enviar uma mensagem para discutir
+        oportunidades de colaboração, projetos ou apenas para trocar ideias
+        sobre tecnologia e desenvolvimento.
+      </p>
+      <ul>
+        <li>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/claudenir-nojosa/">Claudenir Nojosa</a>
+        </li>
+        <li>
+          <strong>E-mail:</strong>
+          <a href="mailto:clau.nojosaf@gmail.com">clau.nojosaf@gmail.com</a>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      function showSection(sectionId) {
+        // Esconde todas as seções
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => section.classList.remove("active"));
+
+        // Mostra a seção selecionada
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add("active");
+      }
+
+      // Mostra a primeira seção por padrão
+      showSection("sobreMim");
+    </script>
+  </body>
+</html>
